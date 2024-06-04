@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Making your first Phaser 3 Game - Part 1</title>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
+  <style type="text/css">
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="./util/slider.js"></script>
+  <script src="./scene/scene_0.js"></script>
+  <script src="./scene/scene_1.js"></script>
+
+  <script type="text/javascript">
+
+    let gameConfig = {
+      type: Phaser.AUTO,
+      width: window.innerWidth,
+      height: window.innerHeight,
+      scale: {
+        mode: Phaser.Scale.RESIZE,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+      },
+      scene: [MainMenu, GameScene]
+    };
+
+    let game = new Phaser.Game(gameConfig);
+  </script>
+
+</body>
+
+</html>
